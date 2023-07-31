@@ -17,14 +17,6 @@ resource "aws_security_group" "web_instance_sg" {
   name        = "web_instance_sgs"
   description = "Allow inbound http and https traffic"
 
-  ingress {
-    description = "HTTPS"
-    from_port   = 443
-    to_port     = 443
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
   dynamic "ingress" {
     for_each = ["80", "8080", "443", "80", "22"] #list of ports we want to create
     content {
