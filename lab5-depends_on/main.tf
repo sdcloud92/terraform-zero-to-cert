@@ -1,3 +1,5 @@
+#Using depends_on to determine the order of resource creation by creating dependencies
+
 provider "aws" {
   region = "us-east-1"
 }
