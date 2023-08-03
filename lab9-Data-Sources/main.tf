@@ -17,7 +17,7 @@ data "aws_vpc" "DeathStar" {
 # Create aws_subnets using data resources
 resource "aws_subnet" "subnet1" {
     vpc_id = data.aws_vpc.DeathStar.id
-    cidr_block = 10.0.1.0/24
+    cidr_block = 10.0.1.0/24 #Made this up, just an example
     availability_zone = data.aws_availability_zones.available.names[0]
     tags {
         Name = "subnet1"
@@ -27,7 +27,7 @@ resource "aws_subnet" "subnet1" {
 
 resource "aws_subnet" "subnet2" {
     vpc_id = data.aws_vpc.DeathStar.id
-    cidr_block = 10.0.2.0/24
+    cidr_block = 10.0.2.0/24 #Made this up, just an example
     availability_zone = data.aws_availability_zones.available.names[1]
     tags {
         Name = "subnet2"
