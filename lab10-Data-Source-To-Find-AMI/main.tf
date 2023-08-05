@@ -17,7 +17,7 @@ data "aws_ami" "latest_amazon_linux" {
   most_recent = true
   filter {
     name   = "name"
-    values = ["al2023-ami-*.0-kernel-6.1-x86_64"] #Swapped out timestamp for *
+    values = ["al2023-ami-*-kernel-6.1-x86_64"] #Swapped out timestamp for *
   }
 }
 
